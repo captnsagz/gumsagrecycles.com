@@ -6,41 +6,56 @@
   <title>Gumsag Multi Synergy Sikeli</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body { font-family: 'Roboto', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
 
     header {
-      background: url('https://images.unsplash.com/photo-1581091870622-5a4c6b6c3f82') no-repeat center center/cover;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581091870622-5a4c6b6c3f82') no-repeat center center/cover;
       color: white;
-      padding: 5rem 2rem;
+      padding: 5rem 1.5rem;
       text-align: center;
     }
 
-    header h1 { font-size: 3rem; margin: 0; }
-    header p { font-size: 1.2rem; }
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
 
-    section { padding: 3rem 2rem; max-width: 1100px; margin: auto; }
+    section {
+      padding: 2.5rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
 
     .about {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .about img {
       max-width: 100%;
       border-radius: 10px;
-      flex: 1 1 300px;
-    }
-
-    .about-text {
-      flex: 1 1 300px;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .about {
+        flex-direction: row;
+        align-items: center;
+      }
+      .services {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
     }
 
     .card {
@@ -52,10 +67,19 @@
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
     }
 
-    .card h3 { margin-top: 0.5rem; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img, .gallery iframe {
+      width: 100%;
+      border-radius: 8px;
+    }
 
     .contact {
       background: #e0f7fa;
@@ -64,15 +88,57 @@
       border-radius: 10px;
     }
 
+    .partner {
+      background: #f1f8e9;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-radius: 10px;
+      margin: 2rem auto;
+      max-width: 800px;
+    }
+
+    .partner a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #2e7d32;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .partner a:hover {
+      background: #256428;
+    }
+
     footer {
       background: #333;
       color: white;
       text-align: center;
       padding: 1rem;
+      font-size: 0.9rem;
     }
 
     a { color: #2e7d32; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 24px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      text-align: center;
+      z-index: 1000;
+    }
+    .whatsapp:hover {
+      background-color: #1ebc5d;
+    }
   </style>
 </head>
 <body>
@@ -84,9 +150,9 @@
 
   <section class="about">
     <img src="https://images.unsplash.com/photo-1581090700227-1d891d4f5cfd" alt="Recycling plant" />
-    <div class="about-text">
+    <div>
       <h2>About Us</h2>
-      <p>Based in Dakata, Kano State, we have over 5 years of experience in HDPE plastic recycling and have recently expanded into PET bottle sorting and baling. We work with waste aggregators and recycling plants to deliver clean, well-baled PET for rPET production.</p>
+      <p>We are a recycling company based in Dakata, Kano State. With over 5 years of expertise in HDPE recycling, we have recently expanded into PET bottle sorting and baling. We serve local and international recycling plants by delivering clean PET feedstock for rPET production.</p>
     </div>
   </section>
 
@@ -95,28 +161,48 @@
     <div class="services">
       <div class="card">
         <h3>HDPE Recycling</h3>
-        <p>We collect and process high-density polyethylene waste into usable raw materials for industry.</p>
+        <p>We process HDPE plastic waste into reusable industrial material for manufacturers.</p>
       </div>
       <div class="card">
         <h3>PET Bottle Sorting</h3>
-        <p>Our sorting facilities ensure high-purity PET feedstock suitable for food-grade recycling plants.</p>
+        <p>Our team ensures top-quality sorting of PET bottles, preparing them for food-grade recycling.</p>
       </div>
       <div class="card">
         <h3>Supply of Baled PET</h3>
-        <p>We supply baled PET to rPET processors both locally and internationally, meeting industry standards.</p>
+        <p>We ship baled PET to local and international clients, meeting rPET-grade specifications.</p>
       </div>
     </div>
   </section>
 
+  <section>
+    <h2 style="text-align:center">Gallery & Video</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc695a" alt="Workers at recycling plant">
+      <img src="https://images.unsplash.com/photo-1581093588401-23c4f0dd7e45" alt="PET bales">
+      <iframe src="https://www.youtube.com/embed/qyz3jkOBbXk" title="Recycling process video" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="partner">
+    <h2>Partner With Us</h2>
+    <p>Join hands with us in advancing sustainable recycling across Nigeria. Whether you’re a supplier, buyer, or investor — let’s grow together.</p>
+    <a href="https://forms.gle/hRpnbdcvtBzJQg4A6" target="_blank">Fill the Partnership Form</a>
+  </section>
+
   <section class="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@gumsagsikeli.com">info@gumsagsikeli.com</a></p>
-    <p>Location: Dakata Industrial Zone, Kano State, Nigeria</p>
+    <p>Email: <a href="mailto:Gumsagmultisynergysikeli@gmail.com">Gumsagmultisynergysikeli@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/2348096027083">+234 809 602 7083</a></p>
+    <p>Location: Dakata Industrial Zone, Kano, Nigeria</p>
   </section>
 
   <footer>
     &copy; 2025 Gumsag Multi Synergy Sikeli. All rights reserved.
   </footer>
+
+  <a class="whatsapp" href="https://wa.me/2348096027083" target="_blank" title="Chat with us">
+    ✉
+  </a>
 
 </body>
 </html>
