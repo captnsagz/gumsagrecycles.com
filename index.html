@@ -2,42 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gumsag Multi Synergy Sikeli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 0; }
-    header { background-color: #2e7d32; color: #fff; padding: 2rem; text-align: center; }
-    main { padding: 2rem; }
-    section { margin-bottom: 2rem; }
-    footer { background-color: #1b5e20; color: white; text-align: center; padding: 1rem; }
+    body { font-family: 'Roboto', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1581091870622-5a4c6b6c3f82') no-repeat center center/cover;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    header h1 { font-size: 3rem; margin: 0; }
+    header p { font-size: 1.2rem; }
+
+    section { padding: 3rem 2rem; max-width: 1100px; margin: auto; }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .about img {
+      max-width: 100%;
+      border-radius: 10px;
+      flex: 1 1 300px;
+    }
+
+    .about-text {
+      flex: 1 1 300px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 { margin-top: 0.5rem; }
+
+    .contact {
+      background: #e0f7fa;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    a { color: #2e7d32; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Gumsag Multi Synergy Sikeli</h1>
-    <p>Turning Waste Into Wealth</p>
+    <p>Turning Waste Into Wealth — PET & HDPE Recycling Experts</p>
   </header>
-  <main>
-    <section>
+
+  <section class="about">
+    <img src="https://images.unsplash.com/photo-1581090700227-1d891d4f5cfd" alt="Recycling plant" />
+    <div class="about-text">
       <h2>About Us</h2>
-      <p>We are a recycling company based in Dakata, Kano with 5 years expertise in HDPE recycling. Recently we’ve expanded into PET sorting and baling, shipping to recycling plants for their rPET needs.</p>
-    </section>
-    <section>
-      <h2>Our Services</h2>
-      <ul>
-        <li>HDPE Plastic Recycling</li>
-        <li>PET Bottle Sorting & Baling</li>
-        <li>Supply of PET bales to rPET manufacturers</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Contact</h2>
-      <p>Email: info@gumsagsikeli.com</p>
-      <p>Location: Dakata, Kano State, Nigeria</p>
-    </section>
-  </main>
+      <p>Based in Dakata, Kano State, we have over 5 years of experience in HDPE plastic recycling and have recently expanded into PET bottle sorting and baling. We work with waste aggregators and recycling plants to deliver clean, well-baled PET for rPET production.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center">Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>HDPE Recycling</h3>
+        <p>We collect and process high-density polyethylene waste into usable raw materials for industry.</p>
+      </div>
+      <div class="card">
+        <h3>PET Bottle Sorting</h3>
+        <p>Our sorting facilities ensure high-purity PET feedstock suitable for food-grade recycling plants.</p>
+      </div>
+      <div class="card">
+        <h3>Supply of Baled PET</h3>
+        <p>We supply baled PET to rPET processors both locally and internationally, meeting industry standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@gumsagsikeli.com">info@gumsagsikeli.com</a></p>
+    <p>Location: Dakata Industrial Zone, Kano State, Nigeria</p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Gumsag Multi Synergy Sikeli</p>
+    &copy; 2025 Gumsag Multi Synergy Sikeli. All rights reserved.
   </footer>
+
 </body>
 </html>
